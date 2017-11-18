@@ -20,8 +20,8 @@ def readFiles(EMB, LBL):
 
 if __name__ == '__main__':
     
-    traindata = readFiles('./NYTAtrocity2/NYTAtrocity1000emb.txt', './NYTAtrocity2/NYTAtrocity1000Label.txt')
-    testdata = readFiles('./AtrocityData/trainemb.txt', './AtrocityData/trainLabel.txt')
+    traindata = readFiles('features1.txt', 'Label1.txt')
+    testdata = readFiles('features2.txt', 'Label2.txt')
     
     
     
