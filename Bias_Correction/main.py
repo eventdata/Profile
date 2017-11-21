@@ -39,7 +39,7 @@ if __name__ == '__main__':
     correct = 0
     incorrect = 0
     
-    with open('./AtrocityData/trainLabel.txt') as fileTeLbl:
+    with open('Label2.txt') as fileTeLbl:
         for PreLbl, TrueLbl in zip(result, fileTeLbl):
             if PreLbl[0] == float(TrueLbl): 
                 correct +=1
