@@ -208,12 +208,8 @@ def makingfile(trainTextList, trainLblList, vocabulary, vocabFreq, corpus, alpha
 
 def main(alpha, lang, trainTextList, trainLblList):
     
-#    trainFile = '/data/maryam/Documents/Geolocation11272017/Spanish_protest/Spanish_feature_viveca/Mitie7/ProtestSpanishSentences7.txt'
-#    testFile = 'PDFSpanishSentencesTest.txt'
-#    trainLblFile = '/data/maryam/Documents/Geolocation11272017/Spanish_protest/Spanish_feature_viveca/Mitie7/ProtestSpanishlabels7.txt'
-#    testLblFile = 'PDFSpanishlabelsTest.txt'
 #    alpha=0.01
-    #word2vec_model = '/home/maryam/Data/Documents/Geolocation26092016/Word2Vec/GoogleNews-vectors-negative300.bin.gz'
+    #word2vec_model = '/GoogleNews-vectors-negative300.bin.gz'
     
     if lang =='es': 
         word2vec_model = '/usr/src/data/wiki.es.vec'
