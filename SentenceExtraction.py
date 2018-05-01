@@ -95,25 +95,22 @@ def main(pathGT, pathR, NER, lang):
     Doc = list()
     Loc = list()
     
-    
-#    pathGT = '/data/maryam/Documents/Geolocation11272017/Spanish_PDF/PDF_JSON/MunicipalitFiltered.txt'
-#    pathR = '/data/maryam/Documents/Geolocation11272017/Spanish_PDF/PDF_JSON/StoryFiltered.txt'
-    
+      
     print("loading NER model...")
     if NER == 'Stanford': 
         # Stanford setup
-        os.environ['CLASSPATH'] = '/data/maryam/Documents/Geolocation11272017/Spanish_protest/stanford/stanford-ner.jar'  
+        os.environ['CLASSPATH'] = './stanford/stanford-ner.jar'  
         if lang == 'es':
-            st = StanfordNERTagger('/data/maryam/Documents/Geolocation11272017/Spanish_protest/stanford/stanford-spanish-corenlp-models-current/edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz')
+            st = StanfordNERTagger('./stanford/stanford-spanish-corenlp-models-current/edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz')
         elif lang == 'en': 
-            st = StanfordNERTagger('/data/maryam/Documents/Geolocation11272017/Spanish_protest/stanford/stanford-spanish-corenlp-models-current/edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz')
+            st = StanfordNERTagger('./stanford/stanford-spanish-corenlp-models-current/edu/stanford/nlp/models/ner/spanish.ancora.distsim.s512.crf.ser.gz')
     
     else:
         sys.path.append('/data/maryam/Documents/Tools/Libs/MITIE-master/mitielib')
         if lang == 'es':
-            ner = named_entity_extractor('/data/maryam/Documents/Tools/Libs/MITIE-models/spanish/ner_model.dat')
+            ner = named_entity_extractor('./MITIE-models/spanish/ner_model.dat')
         elif lang == 'en': 
-            ner = named_entity_extractor('/data/maryam/Documents/Tools/Libs/MITIE-models/english/ner_model.dat')
+            ner = named_entity_extractor('./MITIE-models/english/ner_model.dat')
     
     
     # load the country names in different languages
