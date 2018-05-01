@@ -28,8 +28,8 @@ embTest, lblTest = SIFpreprocessing.main(0.01, lang, SentenceListTest, LblListTe
 model = Classification_SVM.trainModel(embTrain, lblTrian)
 predictedResult = Classification_SVM.evaluateModel(embTest, lblTest, model)
 
-print predictedResult
+#print predictedResult
 
 
-accuracy = PostEvaluationProfile.integrateSentences(predictedResult, DocTest, LocTest)
-print accuracy
+#accuracy = PostEvaluationProfile.integrateSentences(predictedResult, DocTest, LocTest)
+#print accuracy
